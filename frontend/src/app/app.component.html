@@ -1,17 +1,32 @@
 <md-toolbar color="primary">
 
-  <span>MyCompany</span>
+  <a href="/"><span>@adnanrahic</span></a>
   <span class="fill-remaining-space"></span>
-  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
+  <div fxLayout fxLayout="row" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <!-- desktop -->
+    <div fxShow fxHide.xs>
+      <button md-button routerLink="/portfolio" routerLinkActive="active"> Portfolio </button>
+      <button md-button routerLink="/about" routerLinkActive="active"> About </button>
+      <button md-button routerLink="/contact" routerLinkActive="active"> Contact </button>
+    </div>
+
+    <!-- mobile -->
+    <button fxShow.xs fxHide md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> Menu</button>
+  </div>
 
 </md-toolbar>
 
 <md-menu #appMenu="mdMenu">
-  <button md-menu-item> Settings </button>
-  <button md-menu-item> Help </button>
+  <button md-menu-item routerLink="/" routerLinkActive="active"> Portfolio </button>
+  <button md-menu-item routerLink="/about" routerLinkActive="active"> About </button>
+  <button md-menu-item routerLink="/contact" routerLinkActive="active"> Contact </button>
 </md-menu>  
 
-<md-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
+
+<router-outlet></router-outlet>
+
+
+<!-- <md-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
 
   <img md-card-image src="{{ data.url }}">
   <md-card-header>
@@ -23,4 +38,4 @@
     <button md-button>SHARE</button>
   </md-card-actions>
 
-</md-card>
+</md-card> -->

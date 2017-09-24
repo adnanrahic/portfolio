@@ -1,0 +1,12 @@
+@import "../assets/styles/variables.scss";
+md-toolbar {
+  a {
+    color: white;
+  }
+  .active {
+    color: $accent;
+  }
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}

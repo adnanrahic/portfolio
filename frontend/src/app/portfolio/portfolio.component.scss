@@ -1,0 +1,20 @@
+.portfolio-header {
+  background: url("/assets/images/desk.jpeg");
+  height: 60vh;
+  color: white;
+
+  h1 {
+    margin: 100px 0 20px 0;
+    font-size: 82px;
+    text-align: center;
+  }
+  .spacer {
+    border-bottom: 3px solid white;
+    width: 50px;
+  }
+  p {
+    width: 80%;
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
