@@ -36,7 +36,7 @@ jobs:
       # run tests!
       - run: npm build
 
-  test1:
+  test:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.5
@@ -65,4 +65,4 @@ workflows:
   build-and-test-frontend:
     jobs:
       - build
-      - test1
+      - test
